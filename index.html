@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All things stupid</title>
+
+  </head>
+  <body>
+    <h1>Stupid is as stupid does....</h1>
+
+    <div id = "GiphTitles">
+      <button class="giphOne"></button>
+            <button class="giphTwo"></button>
+                  <button class="giphThree"></button>
+                        <button class="giphFour"></button>
+                              <button class="giphFive"></button>
+                                    <button class="giphSix"></button>
+                                          <button class="giphSeven"></button>
+                                                <button class="giphEight"></button>
+                                                      <button class="giphNine"></button>
+                                                            <button class="giphTen"></button>
+      <form>
+    <input type="text" id="search">
+    <button class="btn">Name something stupid</button>
+      </form>
+    </div>
+<div class="giphs">
+
+</div>
+
+
+
+  <span>*/ giphy parameters
+q - search query term or phrase
+limit - (optional) number of results to return, maximum 100. Default 25.
+offset - (optional) results offset, defaults to 0.
+rating - limit results to those rated (y,g, pg, pg-13 or r).
+fmt - (optional) return results in html or json format (useful for viewng responses as GIFs to debug/test)*/></span>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+////javascript here
+
+    var stupidThings = {
+      stupidHoes
+      stupidCats
+      stupidPeople
+      stupidHoes
+      stupidPranks
+      stupidLife
+      stupidMe
+    }
+
+    var APIkey = "198b26fb9646475b9a395ede4ef1e501";
+    //add host api.giphy.com
+
+    //add path /v1/gifs/search
+
+    //search query term
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=stupid+hoes&api_key=" + APIkey;
+
+    $.ajax({
+  url: queryURL,
+  method: "GET"
+})
+  .done(function(response){
+
+   console.log(queryURL);
+
+   console.log(response);
+///put var in buttons
+
+});
+    </script>
+  </body>
+</html>
