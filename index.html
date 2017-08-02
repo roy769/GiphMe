@@ -38,25 +38,25 @@ fmt - (optional) return results in html or json format (useful for viewng respon
 //put vars
 var stupid ={
   stupid:"hoes",
-  stupid:"me",
-  stupid:"boys",
-  stupid:"life",
-  stupid:"things",
-  stupid:"pranks",
-  stupid:"people",
-  stupid:"boss",
-  stupid:"parent",
-  stupid:"kids",
+  dumb:"me",
+  retarded:"boys",
+  wack:"life",
+  foolish:"things",
+  bad:"pranks",
+  fake:"people",
+  lame:"boss",
+  good:"parent",
+  fat:"kids",
 };
 console.log(stupid);
-var giphy = $(this).attr("source");
+//var giphy = $(this).attr("source");
 
 
     //search query term
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + stupid + "&api_key=" + APIkey;
     console.log(queryURL);
 
-    function retrieveGiph(source,rating){
+    function retrieveGiph(images,rating){
 
     $.ajax({
   url: queryURL + "&t= " + encodeURIcomponent(title),
