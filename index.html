@@ -9,16 +9,8 @@
     <h1>Stupid is as stupid does....</h1>
 
     <div id = "GiphTitles">
-      <button class="giphOne"></button>
-            <button class="giphTwo"></button>
-                  <button class="giphThree"></button>
-                        <button class="giphFour"></button>
-                              <button class="giphFive"></button>
-                                    <button class="giphSix"></button>
-                                          <button class="giphSeven"></button>
-                                                <button class="giphEight"></button>
-                                                      <button class="giphNine"></button>
-                                                            <button class="giphTen"></button>
+
+                                                            <button class="giph-here"></button>
       <form>
     <input type="text" id="search">
     <button class="btn">Name something stupid</button>
@@ -40,36 +32,46 @@ fmt - (optional) return results in html or json format (useful for viewng respon
     <script type="text/javascript">
 ////javascript here
 
-    var stupidThings = {
-      stupidHoes
-      stupidCats
-      stupidPeople
-      stupidHoes
-      stupidPranks
-      stupidLife
-      stupidMe
-    }
+
 
     var APIkey = "198b26fb9646475b9a395ede4ef1e501";
-    //add host api.giphy.com
+//put vars
+var stupid ={
+  stupid:"hoes",
+  stupid:"me",
+  stupid:"boys",
+  stupid:"life",
+  stupid:"things",
+  stupid:"pranks",
+  stupid:"people",
+  stupid:"boss",
+  stupid:"parent",
+  stupid:"kids",
+};
+console.log(stupid);
+var giphy = $(this).attr("source");
 
-    //add path /v1/gifs/search
 
     //search query term
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=stupid+hoes&api_key=" + APIkey;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + stupid + "&api_key=" + APIkey;
+    console.log(queryURL);
+
+    function retrieveGiph(source,rating){
 
     $.ajax({
-  url: queryURL,
+  url: queryURL + "&t= " + encodeURIcomponent(title),
   method: "GET"
 })
   .done(function(response){
+    var newBtn = $("<Id>");
+    newBtn.append($("<button>"));
 
-   console.log(queryURL);
 
-   console.log(response);
-///put var in buttons
+    console.log(response);
 
 });
+}
+
     </script>
   </body>
 </html>
