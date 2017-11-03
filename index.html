@@ -1,77 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>All things stupid</title>
-
+    <link rel="stylesheet" href="style.css">
+      <meta charset="utf-8">
+        <title>All things stupid</title>
   </head>
+
   <body>
-    <h1>Stupid is as stupid does....</h1>
+    <h1>All things Nickelodeon</h1>
+      <div id = "GiphTitles">
+        </div>
 
-    <div id = "GiphTitles">
-
-                                                            <button class="giph-here"></button>
-      <form>
-    <input type="text" id="search">
-    <button class="btn">Name something stupid</button>
+      <form id="giph-form">
+        <label for="giph-form">Push It!</label>
+          <input type="text" id="giph-form"><br>
+            <input id="add-giph" type="submit" value="Submit">
       </form>
-    </div>
-<div class="giphs">
 
-</div>
+    <div class="giphs"></div>
 
-
-
-  <span>*/ giphy parameters
-q - search query term or phrase
-limit - (optional) number of results to return, maximum 100. Default 25.
-offset - (optional) results offset, defaults to 0.
-rating - limit results to those rated (y,g, pg, pg-13 or r).
-fmt - (optional) return results in html or json format (useful for viewng responses as GIFs to debug/test)*/></span>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-////javascript here
+      <form class="giph-form" action="index.html" method="post">
+        </form>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/  jquery/3.2.1/jquery.min.js"></script>
+        <script src="logic.js"></script>
 
-    var APIkey = "198b26fb9646475b9a395ede4ef1e501";
-//put vars
-var stupid ={
-  stupid:"hoes",
-  dumb:"me",
-  retarded:"boys",
-  wack:"life",
-  foolish:"things",
-  bad:"pranks",
-  fake:"people",
-  lame:"boss",
-  good:"parent",
-  fat:"kids",
-};
-console.log(stupid);
-//var giphy = $(this).attr("source");
-
-
-    //search query term
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + stupid + "&api_key=" + APIkey;
-    console.log(queryURL);
-
-    function retrieveGiph(images,rating){
-
-    $.ajax({
-  url: queryURL + "&t= " + encodeURIcomponent(title),
-  method: "GET"
-})
-  .done(function(response){
-    var newBtn = $("<Id>");
-    newBtn.append($("<button>"));
-
-
-    console.log(response);
-
-});
-}
-
-    </script>
   </body>
 </html>
